@@ -14,14 +14,11 @@
 
 ## Development
 
-- `middleman` starts the dev server.
-- `middleman build` creates assets for deployment.
+- `middleman` starts the dev server.
+- `middleman build` creates assets for deployment.
 
-
-## Documentation
-
-- [Middleman Documentation](https://middlemanapp.com/basics/install/)
-
+<br/>
+<br/>
 
 ## TODO
 
