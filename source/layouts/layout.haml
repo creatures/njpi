@@ -2,11 +2,12 @@
 %html
 
   %head
-    %meta{charset: 'utf-8'}
+    %meta{charset: "utf-8"}
     <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
     %title= current_page.data.title || "C R E A T U R E S"
     = stylesheet_link_tag "application"
 
   %body{class: "#{page_classes}"}
+    = partial "header"
     = yield
     = javascript_include_tag "application"
