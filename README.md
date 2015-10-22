@@ -14,8 +14,8 @@
 
 ## Development
 
-- `middleman` starts the dev server.
-- `middleman build` creates static files for deployment.
+- `middleman` starts the dev server.
+- `middleman build` creates static files for deployment.
 - `cap deploy:middleman` builds and deploys application.
 
 
