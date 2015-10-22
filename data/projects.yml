@@ -7,6 +7,10 @@
   description: Blah blah blah.
   role: Did stuff.
 -
+  title: CSS Off
+  description: Blah blah blah.
+  role: Did stuff.
+-
   title: MirrorCube
   description: Blah blah blah.
   role: Did stuff.
@@ -19,7 +23,11 @@
   description: Blah blah blah.
   role: Did stuff.
 -
-  title: Sylitics
+  title: Skrill
+  description: Blah blah blah.
+  role: Did stuff.
+-
+  title: Stylitics
   description: Blah blah blah.
   role: Did stuff.
 -
