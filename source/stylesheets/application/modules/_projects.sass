@@ -1,0 +1,44 @@
+// ---------------------------------------------------------------------------
+// Project (list)
+
+.project--list
+  margin-bottom: 100px
+
+
+// ---------------------------------------------------------------------------
+// Project (listing)
+
+.project--listing
+  position: relative
+  min-height: 300px
+  +padding-section
+  .brand
+    font-size: 18px
+    font-weight: bold
+  .actions
+    position: absolute
+    left: 0px
+    right: 0
+    bottom: 30px
+    padding-right: 30px
+    padding-left: 30px
+    a
+      margin-right: 4px
+      &:first-child
+        float: left
+      &:last-child
+        float: right
+
+
+// ---------------------------------------------------------------------------
+// Project (detail)
+
+.project--detail
+  min-height: 200px
+
+
+// ---------------------------------------------------------------------------
+// Projects
+
+@import "projects/*"
+
