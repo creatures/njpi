@@ -1,0 +1,48 @@
+// ---------------------------------------------------------------------------
+// Import the icon font
+
+// Actual path is source/fonts/fontello
+$fontello_font_path: "fontello/font/fontello" !default
+
+@import "compass/css3/font-face"
++font-face("fontello", font-files("#{$fontello_font_path}.woff", woff, "#{$fontello_font_path}.ttf", truetype, "#{$fontello_font_path}.svg#fontello", svg), "#{$fontello_font_path}.eot", normal, normal)
+
+
+// ---------------------------------------------------------------------------
+// Generic icon styling
+
+[class^="icon--"]:before,
+[class*=" icon--"]:before
+  display: inline-block
+  font-family: "fontello"
+  font-style: normal
+  font-weight: normal
+  speak: none
+  text-decoration: inherit
+  text-align: center
+
+  // Reset parent styles, that can break glyph codes
+  font-variant: normal
+  text-transform: none
+
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+
+// ---------------------------------------------------------------------------
+// Icons
+
+// Updating fontello
+
+// 1. Go to the site (fontello.com)
+// 2. Upload our config.json to see the current icon set
+// 3. Select/deselect any icons you want to add/remove
+// 4. Re-export files from fontello
+// 5. Add those files to /app/assets/icons/fontello
+// 6. Convert the styles in fontello/css/fontello.css to sass(http://css2sass.heroku.com)
+// - note: you don't need the top couple of sections that add the base styling. font face and base styling is already added above, only grab the icon specific styles
+// 7. Copy the icon specific styles (now in sass)
+// 8. Overwrite the declarations below with the icon specific styles you copied
+
+.icon--facebook:before
+  content: '\e800'

@@ -1,3 +1,16 @@
 .layout--footer
-  %p
-  = link_to "Facebook", "https://www.facebook.com/New-Jersey-Paranormal-investigations-1517128728589537/", target: "_blank"
+  .site
+    %ul
+      %li{ class: ("is-active" if current_page.url == "/contact/") }
+        = link_to "Contact us", "/contact.html"
+      %li{ class: ("is-active" if current_page.url == "/new_members/") }
+        = link_to "Join our team!", "/new_members.html"
+      %li.facebook
+        = link_to "https://www.facebook.com/New-Jersey-Paranormal-investigations-1517128728589537/", target: "_blank" do
+          %i.icon--facebook
+          %span Facebook
+  .copyright
+    %span
+      &#9400;
+    #{Time.now.year}
+    New Jersey Paranormal Investigations

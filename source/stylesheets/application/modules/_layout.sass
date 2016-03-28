@@ -1,17 +1,116 @@
 // ---------------------------------------------------------------------------
-// Background
-
-body
-  background: #f3f3f3
-
-
-// ---------------------------------------------------------------------------
 // Header
 
 .layout--header
-  +padding-section
-  padding-bottom: 0
+
+  .contact
+    +absolute(30px, 30px, auto, auto)
+    a
+      padding: 2px 15px 4px
+      background: $bg-blue-dark-translucent
+      border-radius: 30px
+      color: rgba($txt-white, 0.9)
+      font-size: 1.7rem
+      text-decoration: none
+      +transition(background 150ms, color 150ms)
+      &:hover
+        color: $txt-white
+        background: $bg-blue-dark
+
+  .hero
+    height: 450px
+    padding-bottom: 0
+    background-image: url("/images/hero/road.jpg")
+    background-position: center top
+    background-size: cover
 
   h1
-    font-size: 24px
+    +align-vertically(78%)
+    font-size: 4.6rem
+    line-height: 1.25em
+    text-align: center
+    a
+      color: rgba($txt-white, 0.9)
+      color: $txt-white
+      font-weight: bold
+      text-decoration: none
 
+  .navigation
+    +padded-sides
+    background: $bg-blue-dark
+    ul
+      text-align: center
+    li
+      display: inline
+      padding: 0 25px
+    a
+      display: inline-block
+      padding: 5px 10px 8px
+      color: rgba($txt-white, 0.8)
+      line-height: 2.8em
+      text-decoration: none
+      +transition(color 150ms)
+      &:hover
+        color: $txt-white
+    .is-active a
+      color: $txt-white
+      text-decoration: underline
+
+
+// ---------------------------------------------------------------------------
+// Content
+
+.layout--content
+  margin: 0 auto
+  max-width: 800px
+  +padded
+
+
+// ---------------------------------------------------------------------------
+// Footer
+
++sticky-footer(63px, ".layout--container", ".layout--spacer", ".layout--footer")
+
+.layout--footer
+  +padded-sides
+  padding-top: 10px
+  font-size: 1.8rem
+  background: $bg-blue-dark
+
+  li
+    display: inline
+    margin-left: 50px
+
+  a
+    color: rgba($txt-white, 0.8)
+    line-height: 2.8em
+    text-decoration: none
+    +transition(color 150ms)
+    &:hover
+      color: $txt-white
+  .is-active a
+    color: $txt-white
+    text-decoration: underline
+
+  .facebook
+    .icon--facebook
+      position: relative
+      top: -1px
+      font-size: 1.6rem
+    span
+      padding-left: 4px
+
+  .site
+    float: right
+    margin-top: -4px
+
+  .copyright
+    float: left
+    margin-top: 2px
+    color: rgba($txt-white, 0.5)
+    font-size: 1.2rem
+    line-height: 4.3rem
+    span
+      position: relative
+      padding-right: 1px
+      font-size: 0.7rem
