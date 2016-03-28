@@ -6,8 +6,11 @@
     = stylesheet_link_tag "application"
 
   %body{class: "#{page_classes}"}
-    = partial "layouts/header"
-    = yield
+    .layout--container
+      = partial "layouts/header"
+      .layout--content
+        = yield
+      .layout--spacer
     = partial "layouts/footer"
-    = javascript_include_tag "application"
 
+    = javascript_include_tag "application"
