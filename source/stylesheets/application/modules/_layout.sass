@@ -3,51 +3,17 @@
 
 .layout--header
 
-  .contact
-    +absolute(30px, 30px, auto, auto)
-    a
-      padding: 2px 15px 4px
-      background: $bg-blue-dark-translucent
-      border-radius: 30px
-      color: rgba($txt-white, 0.9)
-      font-size: 1.7rem
-      text-decoration: none
-      +transition(background 150ms, color 150ms)
-      &:hover
-        color: $txt-white
-        background: $bg-blue-dark
-
-  .hero
-    height: 450px
-    padding-bottom: 0
-    background-image: url("/images/hero/road.jpg")
-    background-position: center top
-    background-size: cover
-
-  h1
-    +align-vertically(78%)
-    font-size: 4.6rem
-    line-height: 1.25em
-    text-align: center
-    a
-      color: rgba($txt-white, 0.9)
-      color: $txt-white
-      font-weight: bold
-      text-decoration: none
-
   .navigation
     +padded-sides
+    padding-top: 10px
+    padding-bottom: 10px
     background: $bg-blue-dark
     ul
       text-align: center
-    li
-      display: inline
-      padding: 0 25px
     a
-      display: inline-block
-      padding: 5px 10px 8px
+      display: block
       color: rgba($txt-white, 0.8)
-      line-height: 2.8em
+      line-height: 2.4em
       text-decoration: none
       +transition(color 150ms)
       &:hover
@@ -55,6 +21,30 @@
     .is-active a
       color: $txt-white
       text-decoration: underline
+
+// change navigation to horizontal list
++susy-breakpoint(768px)
+  .layout--header
+    .navigation
+      padding-top: 0
+      padding-bottom: 0
+      li
+        display: inline
+        padding: 0 20px
+      a
+        display: inline-block
+        padding: 5px 10px 8px
+        line-height: 2.8em
+
+// increase spacing in navigation
++susy-breakpoint(900px)
+  .layout--header
+    .navigation
+      li
+        padding: 0 30px
+
+
+
 
 
 // ---------------------------------------------------------------------------
@@ -69,7 +59,7 @@
 // ---------------------------------------------------------------------------
 // Footer
 
-+sticky-footer(63px, ".layout--container", ".layout--spacer", ".layout--footer")
++sticky-footer(220px, ".layout--container", ".layout--spacer", ".layout--footer")
 
 .layout--footer
   +padded-sides
@@ -77,9 +67,21 @@
   font-size: 1.8rem
   background: $bg-blue-dark
 
+  .site
+    text-align: center
+
+  .copyright
+    color: rgba($txt-white, 0.5)
+    font-size: 1.2rem
+    line-height: 4.3rem
+    text-align: center
+    span
+      position: relative
+      padding-right: 1px
+      font-size: 0.7rem
+
   li
-    display: inline
-    margin-left: 50px
+    text-align: center
 
   a
     color: rgba($txt-white, 0.8)
@@ -88,6 +90,7 @@
     +transition(color 150ms)
     &:hover
       color: $txt-white
+
   .is-active a
     color: $txt-white
     text-decoration: underline
@@ -100,17 +103,26 @@
     span
       padding-left: 4px
 
-  .site
-    float: right
-    margin-top: -4px
 
-  .copyright
-    float: left
-    margin-top: 2px
-    color: rgba($txt-white, 0.5)
-    font-size: 1.2rem
-    line-height: 4.3rem
-    span
-      position: relative
-      padding-right: 1px
-      font-size: 0.7rem
++susy-breakpoint(480px)
+  +sticky-footer(115px, ".layout--container", ".layout--spacer", ".layout--footer")
+  .layout--footer
+    .site
+      text-align: auto
+    li
+      display: inline
+      margin-left: 60px
+      &:first-child
+        margin-left: 0
+
+
++susy-breakpoint(768px)
+  +sticky-footer(63px, ".layout--container", ".layout--spacer", ".layout--footer")
+  .layout--footer
+    .site
+      float: right
+      margin-top: -4px
+    .copyright
+      float: left
+      margin-top: 2px
+

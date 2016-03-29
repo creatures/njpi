@@ -1,0 +1,64 @@
+// ---------------------------------------------------------------------------
+// Default
+
+.hero
+  height: 300px
+  +padded-sides
+  background-image: url("/images/hero/road.jpg")
+  background-position: center top
+  background-size: cover
+
+  .contact
+    +relative(10px, auto, auto, auto)
+    text-align: center
+    a
+      padding: 2px 15px 4px
+      background: $bg-blue-dark-translucent
+      border-radius: 30px
+      color: rgba($txt-white, 0.9)
+      font-size: 1.7rem
+      text-decoration: none
+      +transition(background 150ms, color 150ms)
+      &:hover
+        color: $txt-white
+        background: $bg-blue-dark
+
+  h1
+    +align-vertically(55%)
+    font-size: 3.2rem
+    line-height: 1.25em
+    text-align: center
+    a
+      color: rgba($txt-white, 0.9)
+      color: $txt-white
+      font-weight: bold
+      text-decoration: none
+
+
+// change position of title
++susy-breakpoint(400px)
+  .hero
+    h1
+      +align-vertically(62%)
+
+// increase hero size
+// change size and position of title
+// move contact link to fixed position
++susy-breakpoint(600px)
+  .hero
+    height: 370px
+    h1
+      +align-vertically(78%)
+      font-size: 3.8rem
+    .contact
+      +absolute(30px, 30px, auto, auto)
+
+// increase hero size
+// change size and position of title
++susy-breakpoint(900px)
+  .hero
+    height: 450px
+    h1
+      font-size: 4.6rem
+
+

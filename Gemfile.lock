@@ -7,6 +7,9 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    breakpoint (2.7.0)
+      sass (~> 3.3)
+      sassy-maps (< 1.0.0)
     capistrano (3.4.0)
       i18n
       rake (>= 10.0.0)
@@ -137,6 +140,8 @@ GEM
       ffi (>= 0.5.0)
     ref (2.0.0)
     sass (3.4.19)
+    sassy-maps (0.4.0)
+      sass (~> 3.3)
     sprockets (2.12.4)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -151,6 +156,8 @@ GEM
       colorize (>= 0.7.0)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
+    susy (2.2.12)
+      sass (>= 3.3.0, < 3.5)
     therubyracer (0.12.2)
       libv8 (~> 3.16.14.0)
       ref
@@ -170,12 +177,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  breakpoint
   capistrano
   middleman (~> 3.4.0)
   middleman-imageoptim
   middleman-livereload (~> 3.1.0)
   middleman-minify-html
   oj
+  susy
   therubyracer
 
 BUNDLED WITH

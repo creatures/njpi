@@ -5,6 +5,10 @@ gem "middleman-imageoptim"
 gem "middleman-livereload", "~> 3.1.0"
 gem "middleman-minify-html"
 
+# Assets
+gem "breakpoint"
+gem "susy"
+
 # Deployment
 gem "capistrano"
 
