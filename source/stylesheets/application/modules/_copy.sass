@@ -27,8 +27,13 @@ body
     list-style-type: disc
 
   ol
-    padding-left: 50px
+    padding-left: 17px
     list-style-type: decimal
+
+  // change position of title
+  +susy-breakpoint(400px)
+    ol
+      padding-left: 50px
 
   em
     font-style: italic
@@ -42,16 +47,21 @@ body
     overflow: hidden
     h2
       margin-bottom: 5px
-    .image
-      float: right
-      width: 20%
-    .text
-      float: left
-      width: 80%
-      padding-right: 20px
     p
       line-height: 1.6em
     li
       line-height: 1.6em
     img
-      max-width: 100%
+      max-height: 250px
+
+    +susy-breakpoint(540px)
+      .image
+        float: right
+        width: 20%
+      .text
+        float: left
+        width: 80%
+        padding-right: 20px
+      img
+        max-height: auto
+        max-width: 100%
