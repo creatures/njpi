@@ -3,7 +3,7 @@
 
 lock "3.4.0"
 
-set :application, "njpi.com"
+set :application, "newjerseyparanormalinvestigations.com"
 set :stage, "production"
 set :use_sudo, false
 set :build_dir, "build"
