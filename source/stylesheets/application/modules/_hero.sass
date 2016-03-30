@@ -9,7 +9,8 @@
   background-size: cover
 
   .contact
-    +relative(10px, auto, auto, auto)
+    display: none
+    +absolute(30px, 30px, auto, auto)
     text-align: center
     a
       padding: 2px 15px 4px
@@ -22,24 +23,33 @@
       &:hover
         color: $txt-white
         background: $bg-blue-dark
+  .title
+    +align-vertically(68%)
+    +tisa
+    text-align: center
 
   h1
-    +align-vertically(55%)
+    margin-bottom: 5px
     font-size: 3.2rem
     line-height: 1.25em
-    text-align: center
     a
-      color: rgba($txt-white, 0.9)
-      color: $txt-white
+      color: rgba($txt-white, 0.75)
       font-weight: bold
       text-decoration: none
+
+  h2
+    display: none
+    color: rgba($txt-white, 0.55)
+    font-size: 2.4rem
+    font-style: italic
 
 
 // change position of title
 +susy-breakpoint(400px)
   .hero
-    h1
-      +align-vertically(62%)
+    .title
+      +align-vertically(72%)
+
 
 // increase hero size
 // change size and position of title
@@ -47,11 +57,20 @@
 +susy-breakpoint(600px)
   .hero
     height: 370px
-    h1
+    .title
       +align-vertically(78%)
+    h1
       font-size: 3.8rem
     .contact
-      +absolute(30px, 30px, auto, auto)
+      display: block
+
+
+// display h2
++susy-breakpoint(720px)
+  .hero
+    h2
+      display: block
+
 
 // increase hero size
 // change size and position of title
